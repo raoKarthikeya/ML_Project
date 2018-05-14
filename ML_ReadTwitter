@@ -1,0 +1,662 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{\n",
+      "    \"created_at\": \"Sun May 13 14:06:40 +0000 2018\",\n",
+      "    \"id\": 995666641521463296,\n",
+      "    \"id_str\": \"995666641521463296\",\n",
+      "    \"text\": \"RT @WhiteHouse: \\\"Since the earliest days of our republic, America's strength has come from the love and courage and devotion of our mothers\\u2026\",\n",
+      "    \"truncated\": false,\n",
+      "    \"entities\": {\n",
+      "        \"hashtags\": [],\n",
+      "        \"symbols\": [],\n",
+      "        \"user_mentions\": [\n",
+      "            {\n",
+      "                \"screen_name\": \"WhiteHouse\",\n",
+      "                \"name\": \"The White House\",\n",
+      "                \"id\": 822215673812119553,\n",
+      "                \"id_str\": \"822215673812119553\",\n",
+      "                \"indices\": [\n",
+      "                    3,\n",
+      "                    14\n",
+      "                ]\n",
+      "            }\n",
+      "        ],\n",
+      "        \"urls\": []\n",
+      "    },\n",
+      "    \"source\": \"<a href=\\\"http://twitter.com/download/iphone\\\" rel=\\\"nofollow\\\">Twitter for iPhone</a>\",\n",
+      "    \"in_reply_to_status_id\": null,\n",
+      "    \"in_reply_to_status_id_str\": null,\n",
+      "    \"in_reply_to_user_id\": null,\n",
+      "    \"in_reply_to_user_id_str\": null,\n",
+      "    \"in_reply_to_screen_name\": null,\n",
+      "    \"user\": {\n",
+      "        \"id\": 822215679726100480,\n",
+      "        \"id_str\": \"822215679726100480\",\n",
+      "        \"name\": \"President Trump\",\n",
+      "        \"screen_name\": \"POTUS\",\n",
+      "        \"location\": \"Washington, D.C.\",\n",
+      "        \"description\": \"45th President of the United States of America, @realDonaldTrump. Tweets archived: https://t.co/eVVzoBb3Zr\",\n",
+      "        \"url\": \"https://t.co/IxLjEB2zlE\",\n",
+      "        \"entities\": {\n",
+      "            \"url\": {\n",
+      "                \"urls\": [\n",
+      "                    {\n",
+      "                        \"url\": \"https://t.co/IxLjEB2zlE\",\n",
+      "                        \"expanded_url\": \"http://WhiteHouse.gov\",\n",
+      "                        \"display_url\": \"WhiteHouse.gov\",\n",
+      "                        \"indices\": [\n",
+      "                            0,\n",
+      "                            23\n",
+      "                        ]\n",
+      "                    }\n",
+      "                ]\n",
+      "            },\n",
+      "            \"description\": {\n",
+      "                \"urls\": [\n",
+      "                    {\n",
+      "                        \"url\": \"https://t.co/eVVzoBb3Zr\",\n",
+      "                        \"expanded_url\": \"http://wh.gov/privacy\",\n",
+      "                        \"display_url\": \"wh.gov/privacy\",\n",
+      "                        \"indices\": [\n",
+      "                            83,\n",
+      "                            106\n",
+      "                        ]\n",
+      "                    }\n",
+      "                ]\n",
+      "            }\n",
+      "        },\n",
+      "        \"protected\": false,\n",
+      "        \"followers_count\": 23115615,\n",
+      "        \"friends_count\": 40,\n",
+      "        \"listed_count\": 18923,\n",
+      "        \"created_at\": \"Thu Jan 19 22:54:28 +0000 2017\",\n",
+      "        \"favourites_count\": 104,\n",
+      "        \"utc_offset\": -14400,\n",
+      "        \"time_zone\": \"Eastern Time (US & Canada)\",\n",
+      "        \"geo_enabled\": true,\n",
+      "        \"verified\": true,\n",
+      "        \"statuses_count\": 2673,\n",
+      "        \"lang\": \"en\",\n",
+      "        \"contributors_enabled\": false,\n",
+      "        \"is_translator\": false,\n",
+      "        \"is_translation_enabled\": false,\n",
+      "        \"profile_background_color\": \"F5F8FA\",\n",
+      "        \"profile_background_image_url\": null,\n",
+      "        \"profile_background_image_url_https\": null,\n",
+      "        \"profile_background_tile\": false,\n",
+      "        \"profile_image_url\": \"http://pbs.twimg.com/profile_images/859982100904148992/hv5soju7_normal.jpg\",\n",
+      "        \"profile_image_url_https\": \"https://pbs.twimg.com/profile_images/859982100904148992/hv5soju7_normal.jpg\",\n",
+      "        \"profile_banner_url\": \"https://pbs.twimg.com/profile_banners/822215679726100480/1507040566\",\n",
+      "        \"profile_link_color\": \"1DA1F2\",\n",
+      "        \"profile_sidebar_border_color\": \"C0DEED\",\n",
+      "        \"profile_sidebar_fill_color\": \"DDEEF6\",\n",
+      "        \"profile_text_color\": \"333333\",\n",
+      "        \"profile_use_background_image\": true,\n",
+      "        \"has_extended_profile\": false,\n",
+      "        \"default_profile\": true,\n",
+      "        \"default_profile_image\": false,\n",
+      "        \"following\": true,\n",
+      "        \"follow_request_sent\": false,\n",
+      "        \"notifications\": false,\n",
+      "        \"translator_type\": \"regular\"\n",
+      "    },\n",
+      "    \"geo\": null,\n",
+      "    \"coordinates\": null,\n",
+      "    \"place\": null,\n",
+      "    \"contributors\": null,\n",
+      "    \"retweeted_status\": {\n",
+      "        \"created_at\": \"Sun May 13 14:03:00 +0000 2018\",\n",
+      "        \"id\": 995665718132723712,\n",
+      "        \"id_str\": \"995665718132723712\",\n",
+      "        \"text\": \"\\\"Since the earliest days of our republic, America's strength has come from the love and courage and devotion of our\\u2026 https://t.co/40xT0PHo0T\",\n",
+      "        \"truncated\": true,\n",
+      "        \"entities\": {\n",
+      "            \"hashtags\": [],\n",
+      "            \"symbols\": [],\n",
+      "            \"user_mentions\": [],\n",
+      "            \"urls\": [\n",
+      "                {\n",
+      "                    \"url\": \"https://t.co/40xT0PHo0T\",\n",
+      "                    \"expanded_url\": \"https://twitter.com/i/web/status/995665718132723712\",\n",
+      "                    \"display_url\": \"twitter.com/i/web/status/9\\u2026\",\n",
+      "                    \"indices\": [\n",
+      "                        117,\n",
+      "                        140\n",
+      "                    ]\n",
+      "                }\n",
+      "            ]\n",
+      "        },\n",
+      "        \"source\": \"<a href=\\\"https://studio.twitter.com\\\" rel=\\\"nofollow\\\">Media Studio</a>\",\n",
+      "        \"in_reply_to_status_id\": null,\n",
+      "        \"in_reply_to_status_id_str\": null,\n",
+      "        \"in_reply_to_user_id\": null,\n",
+      "        \"in_reply_to_user_id_str\": null,\n",
+      "        \"in_reply_to_screen_name\": null,\n",
+      "        \"user\": {\n",
+      "            \"id\": 822215673812119553,\n",
+      "            \"id_str\": \"822215673812119553\",\n",
+      "            \"name\": \"The White House\",\n",
+      "            \"screen_name\": \"WhiteHouse\",\n",
+      "            \"location\": \"Washington, D.C.\",\n",
+      "            \"description\": \"Welcome to @WhiteHouse! Follow for the latest from President @realDonaldTrump and his Administration. Tweets may be archived: https://t.co/IURuMIrzxb\",\n",
+      "            \"url\": \"https://t.co/wyOVgSLgBV\",\n",
+      "            \"entities\": {\n",
+      "                \"url\": {\n",
+      "                    \"urls\": [\n",
+      "                        {\n",
+      "                            \"url\": \"https://t.co/wyOVgSLgBV\",\n",
+      "                            \"expanded_url\": \"http://www.WhiteHouse.gov\",\n",
+      "                            \"display_url\": \"WhiteHouse.gov\",\n",
+      "                            \"indices\": [\n",
+      "                                0,\n",
+      "                                23\n",
+      "                            ]\n",
+      "                        }\n",
+      "                    ]\n",
+      "                },\n",
+      "                \"description\": {\n",
+      "                    \"urls\": [\n",
+      "                        {\n",
+      "                            \"url\": \"https://t.co/IURuMIrzxb\",\n",
+      "                            \"expanded_url\": \"http://whitehouse.gov/privacy\",\n",
+      "                            \"display_url\": \"whitehouse.gov/privacy\",\n",
+      "                            \"indices\": [\n",
+      "                                126,\n",
+      "                                149\n",
+      "                            ]\n",
+      "                        }\n",
+      "                    ]\n",
+      "                }\n",
+      "            },\n",
+      "            \"protected\": false,\n",
+      "            \"followers_count\": 17114000,\n",
+      "            \"friends_count\": 12,\n",
+      "            \"listed_count\": 7300,\n",
+      "            \"created_at\": \"Thu Jan 19 22:54:27 +0000 2017\",\n",
+      "            \"favourites_count\": 9,\n",
+      "            \"utc_offset\": -14400,\n",
+      "            \"time_zone\": \"Eastern Time (US & Canada)\",\n",
+      "            \"geo_enabled\": true,\n",
+      "            \"verified\": true,\n",
+      "            \"statuses_count\": 4129,\n",
+      "            \"lang\": \"en\",\n",
+      "            \"contributors_enabled\": false,\n",
+      "            \"is_translator\": false,\n",
+      "            \"is_translation_enabled\": false,\n",
+      "            \"profile_background_color\": \"F5F8FA\",\n",
+      "            \"profile_background_image_url\": null,\n",
+      "            \"profile_background_image_url_https\": null,\n",
+      "            \"profile_background_tile\": false,\n",
+      "            \"profile_image_url\": \"http://pbs.twimg.com/profile_images/822251886988267520/28GpoRsy_normal.jpg\",\n",
+      "            \"profile_image_url_https\": \"https://pbs.twimg.com/profile_images/822251886988267520/28GpoRsy_normal.jpg\",\n",
+      "            \"profile_banner_url\": \"https://pbs.twimg.com/profile_banners/822215673812119553/1508763959\",\n",
+      "            \"profile_link_color\": \"1DA1F2\",\n",
+      "            \"profile_sidebar_border_color\": \"C0DEED\",\n",
+      "            \"profile_sidebar_fill_color\": \"DDEEF6\",\n",
+      "            \"profile_text_color\": \"333333\",\n",
+      "            \"profile_use_background_image\": true,\n",
+      "            \"has_extended_profile\": false,\n",
+      "            \"default_profile\": true,\n",
+      "            \"default_profile_image\": false,\n",
+      "            \"following\": false,\n",
+      "            \"follow_request_sent\": false,\n",
+      "            \"notifications\": false,\n",
+      "            \"translator_type\": \"none\"\n",
+      "        },\n",
+      "        \"geo\": null,\n",
+      "        \"coordinates\": null,\n",
+      "        \"place\": null,\n",
+      "        \"contributors\": null,\n",
+      "        \"is_quote_status\": false,\n",
+      "        \"retweet_count\": 3258,\n",
+      "        \"favorite_count\": 14898,\n",
+      "        \"favorited\": false,\n",
+      "        \"retweeted\": false,\n",
+      "        \"possibly_sensitive\": false,\n",
+      "        \"possibly_sensitive_appealable\": false,\n",
+      "        \"lang\": \"en\"\n",
+      "    },\n",
+      "    \"is_quote_status\": false,\n",
+      "    \"retweet_count\": 3258,\n",
+      "    \"favorite_count\": 0,\n",
+      "    \"favorited\": false,\n",
+      "    \"retweeted\": false,\n",
+      "    \"lang\": \"en\"\n",
+      "}\n"
+     ]
+    }
+   ],
+   "source": [
+    "import tweepy\n",
+    "from tweepy import OAuthHandler\n",
+    " \n",
+    "import json\n",
+    "    \n",
+    "def process_or_store(tweet):\n",
+    "    with open('mytweets.json', 'w') as outfile:\n",
+    "        json.dump(tweet, outfile)\n",
+    "    \n",
+    "    \n",
+    "consumer_key = \"wUbPMTYJehTNInkTnvpHAHUjT\"\n",
+    "consumer_secret = \"CFviWj9CNnpvP1H5P2zYorOjTfFR2MYUMZEa7WEDXWh6x2RYop\"\n",
+    "access_token = \"2720512345-zqH6OrfKrqiiX1N9XZxz7Yc7MFlJYs1orzWKV1U\"\n",
+    "access_secret = \"3vwK2dbqgPUiKceJSrjKu62o9Rp6m8OodRwXSeVsZ3D4i\"\n",
+    " \n",
+    "auth = OAuthHandler(consumer_key, consumer_secret)\n",
+    "auth.set_access_token(access_token, access_secret)\n",
+    " \n",
+    "api = tweepy.API(auth)\n",
+    "\n",
+    "#for status in tweepy.Cursor(api.home_timeline).items(10):\n",
+    " #   # Process a single status\n",
+    "  #  print(status.text)\n",
+    "\n",
+    "for status in tweepy.Cursor(api.home_timeline).items(10):\n",
+    "    # Process a single status\n",
+    "    process_or_store(status._json)\n",
+    "\n",
+    "#for friend in tweepy.Cursor(api.friends).items():\n",
+    "#    process_or_store(friend._json)\n",
+    "\n",
+    "#for tweet in tweepy.Cursor(api.user_timeline).items():\n",
+    "#    process_or_store(tweet._json)\n",
+    "    \n",
+    "with open('mytweets.json', 'r') as f:\n",
+    "    line = f.readline() # read only the first tweet/line\n",
+    "    tweet = json.loads(line) # load it as Python dict\n",
+    "    print(json.dumps(tweet, indent=4)) # pretty-print\n",
+    "    \n",
+    "    \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['RT', '@', 'marcobonzanini', ':', 'just', 'an', 'example', '!', ':', 'D', 'http', ':', '//example.com', '#', 'NLP']\n"
+     ]
+    }
+   ],
+   "source": [
+    "from nltk.tokenize import word_tokenize\n",
+    "\n",
+    "tweet = 'RT @marcobonzanini: just an example! :D http://example.com #NLP'\n",
+    "print(word_tokenize(tweet))\n",
+    "# ['RT', '@', 'marcobonzanini', ':', 'just', 'an', 'example', '!', ':', 'D', 'http', ':', '//example.com', '#', 'NLP']\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['RT', '@marcobonzanini', ':', 'just', 'an', 'example', '!', ':D', 'http://example.com', '#NLP']\n"
+     ]
+    }
+   ],
+   "source": [
+    "import re\n",
+    " \n",
+    "emoticons_str = r\"\"\"\n",
+    "    (?:\n",
+    "        [:=;] # Eyes\n",
+    "        [oO\\-]? # Nose (optional)\n",
+    "        [D\\)\\]\\(\\]/\\\\OpP] # Mouth\n",
+    "    )\"\"\"\n",
+    " \n",
+    "regex_str = [\n",
+    "    emoticons_str,\n",
+    "    r'<[^>]+>', # HTML tags\n",
+    "    r'(?:@[\\w_]+)', # @-mentions\n",
+    "    r\"(?:\\#+[\\w_]+[\\w\\'_\\-]*[\\w_]+)\", # hash-tags\n",
+    "    r'http[s]?://(?:[a-z]|[0-9]|[$-_@.&amp;+]|[!*\\(\\),]|(?:%[0-9a-f][0-9a-f]))+', # URLs\n",
+    " \n",
+    "    r'(?:(?:\\d+,?)+(?:\\.?\\d+)?)', # numbers\n",
+    "    r\"(?:[a-z][a-z'\\-_]+[a-z])\", # words with - and '\n",
+    "    r'(?:[\\w_]+)', # other words\n",
+    "    r'(?:\\S)' # anything else\n",
+    "]\n",
+    "    \n",
+    "tokens_re = re.compile(r'('+'|'.join(regex_str)+')', re.VERBOSE | re.IGNORECASE)\n",
+    "emoticon_re = re.compile(r'^'+emoticons_str+'$', re.VERBOSE | re.IGNORECASE)\n",
+    " \n",
+    "def tokenize(s):\n",
+    "    return tokens_re.findall(s)\n",
+    " \n",
+    "def preprocess(s, lowercase=False):\n",
+    "    tokens = tokenize(s)\n",
+    "    if lowercase:\n",
+    "        tokens = [token if emoticon_re.search(token) else token.lower() for token in tokens]\n",
+    "    return tokens\n",
+    " \n",
+    "tweet = 'RT @marcobonzanini: just an example! :D http://example.com #NLP'\n",
+    "print(preprocess(tweet))\n",
+    "# ['RT', '@marcobonzanini', ':', 'just', 'an', 'example', '!', ':D', 'http://example.com', '#NLP']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['RT', '@WhiteHouse', ':', '\"', 'Since', 'the', 'earliest', 'days', 'of', 'our', 'republic', ',', \"America's\", 'strength', 'has', 'come', 'from', 'the', 'love', 'and', 'courage', 'and', 'devotion', 'of', 'our', 'mothers', '…']\n"
+     ]
+    }
+   ],
+   "source": [
+    "def do_something_else(tokens):\n",
+    "    print(tokens)\n",
+    "\n",
+    "with open('mytweets.json', 'r') as f:\n",
+    "    for line in f:\n",
+    "        tweet = json.loads(line)\n",
+    "        tokens = preprocess(tweet['text'])\n",
+    "        do_something_else(tokens)\n",
+    "        \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[('the', 2), ('of', 2), ('our', 2), ('and', 2), ('RT', 1)]\n"
+     ]
+    }
+   ],
+   "source": [
+    "import operator \n",
+    "import json\n",
+    "from collections import Counter\n",
+    " \n",
+    "fname = 'mytweets.json'\n",
+    "with open(fname, 'r') as f:\n",
+    "    count_all = Counter()\n",
+    "    for line in f:\n",
+    "        tweet = json.loads(line)\n",
+    "        # Create a list with all the terms\n",
+    "        terms_all = [term for term in preprocess(tweet['text'])]\n",
+    "        # Update the counter\n",
+    "        count_all.update(terms_all)\n",
+    "    # Print the first 5 most frequent words\n",
+    "    print(count_all.most_common(5))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[('RT', 2), ('@WhiteHouse', 2), ('Since', 2), ('the', 2), ('earliest', 2)]\n"
+     ]
+    }
+   ],
+   "source": [
+    "from nltk.corpus import stopwords\n",
+    "import string\n",
+    " \n",
+    "punctuation = list(string.punctuation)\n",
+    "stop = stopwords.words('english') + punctuation + ['rt', 'via']\n",
+    "\n",
+    "terms_stop = [term for term in preprocess(tweet['text']) if term not in stop]\n",
+    "count_all.update(terms_stop)\n",
+    "# Print the first 5 most frequent words\n",
+    "print(count_all.most_common(5))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[(('RT', 'Since'), 1), (('RT', 'earliest'), 1), (('RT', 'days'), 1), (('RT', 'republic'), 1), (('RT', 'strength'), 1)]\n"
+     ]
+    }
+   ],
+   "source": [
+    "from collections import defaultdict\n",
+    "# remember to include the other import from the previous post\n",
+    " \n",
+    "com = defaultdict(lambda : defaultdict(int))\n",
+    " \n",
+    "with open(fname, 'r') as f:\n",
+    "# f is the file pointer to the JSON data set\n",
+    "    for line in f: \n",
+    "        tweet = json.loads(line)\n",
+    "        terms_only = [term for term in preprocess(tweet['text']) \n",
+    "                      if term not in stop \n",
+    "                      and not term.startswith(('#', '@'))]\n",
+    "\n",
+    "        # Build co-occurrence matrix\n",
+    "        for i in range(len(terms_only)-1):            \n",
+    "            for j in range(i+1, len(terms_only)):\n",
+    "                w1, w2 = sorted([terms_only[i], terms_only[j]])                \n",
+    "                if w1 != w2:\n",
+    "                    com[w1][w2] += 1\n",
+    "                    \n",
+    "com_max = []\n",
+    "# For each term, look for the most common co-occurrent terms\n",
+    "for t1 in com:\n",
+    "    t1_max_terms = sorted(com[t1].items(), key=operator.itemgetter(1), reverse=True)[:5]\n",
+    "    for t2, t2_count in t1_max_terms:\n",
+    "        com_max.append(((t1, t2), t2_count))\n",
+    "# Get the most frequent co-occurrences\n",
+    "terms_max = sorted(com_max, key=operator.itemgetter(1), reverse=True)\n",
+    "print(terms_max[:5])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'\\n# modify loop for coocurance\\nsearch_word = sys.argv[1] # pass a term as a command-line argument\\ncount_search = Counter()\\nfor line in f:\\n    tweet = json.loads(line)\\n    terms_only = [term for term in preprocess(tweet[\\'text\\']) \\n                  if term not in stop \\n                  and not term.startswith((\\'#\\', \\'@\\'))]\\n    if search_word in terms_only:\\n        count_search.update(terms_only)\\nprint(\"Co-occurrence for %s:\" % search_word)\\nprint(count_search.most_common(20))\\n'"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "'''\n",
+    "# modify loop for coocurance\n",
+    "search_word = sys.argv[1] # pass a term as a command-line argument\n",
+    "count_search = Counter()\n",
+    "for line in f:\n",
+    "    tweet = json.loads(line)\n",
+    "    terms_only = [term for term in preprocess(tweet['text']) \n",
+    "                  if term not in stop \n",
+    "                  and not term.startswith(('#', '@'))]\n",
+    "    if search_word in terms_only:\n",
+    "        count_search.update(terms_only)\n",
+    "print(\"Co-occurrence for %s:\" % search_word)\n",
+    "print(count_search.most_common(20))\n",
+    "'''"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "import vincent\n",
+    " \n",
+    "word_freq = count_all.most_common(20)\n",
+    "labels, freq = zip(*word_freq)\n",
+    "data = {'data': freq, 'x': labels}\n",
+    "bar = vincent.Bar(data, iter_idx='x')\n",
+    "bar.to_json('term_freq.json')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "import pandas\n",
+    "import json\n",
+    "\n",
+    "fname = 'mytweets.json'\n",
+    "with open(fname, 'r') as f:\n",
+    "\n",
+    "    dates_ITAvWAL = []\n",
+    "    # f is the file pointer to the JSON data set\n",
+    "    for line in f:\n",
+    "        tweet = json.loads(line)\n",
+    "        # let's focus on hashtags only at the moment\n",
+    "        terms_hash = [term for term in preprocess(tweet['text']) if term.startswith('#')]\n",
+    "        # track when the hashtag is mentioned\n",
+    "        if '#itavwal' in terms_hash:\n",
+    "            dates_ITAvWAL.append(tweet['created_at'])\n",
+    "\n",
+    "    # a list of \"1\" to count the hashtags\n",
+    "    ones = [1]*len(dates_ITAvWAL)\n",
+    "    # the index of the series\n",
+    "    idx = pandas.DatetimeIndex(dates_ITAvWAL)\n",
+    "    # the actual series (at series of 1s for the moment)\n",
+    "    ITAvWAL = pandas.Series(ones, index=idx)\n",
+    "\n",
+    "    # Resampling / bucketing\n",
+    "    #per_minute = ITAvWAL.resample('1Min', how='sum').fillna(0)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "import vincent\n",
+    "\n",
+    "time_chart = vincent.Line(ITAvWAL)\n",
+    "time_chart.axis_titles(x='Time', y='Freq')\n",
+    "time_chart.to_json('time_chart.json')\n",
+    "\n",
+    "\n",
+    "#parse(\"time_chart.json\");"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'per_minute_i' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "\u001b[1;32m<ipython-input-12-24ff59371a86>\u001b[0m in \u001b[0;36m<module>\u001b[1;34m()\u001b[0m\n\u001b[0;32m      1\u001b[0m \u001b[1;31m# all the data together\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[1;32m----> 2\u001b[1;33m \u001b[0mmatch_data\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mdict\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mITAvWAL\u001b[0m\u001b[1;33m=\u001b[0m\u001b[0mper_minute_i\u001b[0m\u001b[1;33m,\u001b[0m \u001b[0mSCOvIRE\u001b[0m\u001b[1;33m=\u001b[0m\u001b[0mper_minute_s\u001b[0m\u001b[1;33m,\u001b[0m \u001b[0mENGvFRA\u001b[0m\u001b[1;33m=\u001b[0m\u001b[0mper_minute_e\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m\u001b[0;32m      3\u001b[0m \u001b[1;31m# we need a DataFrame, to accommodate multiple series\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m      4\u001b[0m all_matches = pandas.DataFrame(data=match_data,\n\u001b[0;32m      5\u001b[0m                                index=per_minute_i.index)\n",
+      "\u001b[1;31mNameError\u001b[0m: name 'per_minute_i' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "# all the data together\n",
+    "match_data = dict(ITAvWAL=per_minute_i, SCOvIRE=per_minute_s, ENGvFRA=per_minute_e)\n",
+    "# we need a DataFrame, to accommodate multiple series\n",
+    "all_matches = pandas.DataFrame(data=match_data,\n",
+    "                               index=per_minute_i.index)\n",
+    "# Resampling as above\n",
+    "all_matches = all_matches.resample('1Min', how='sum').fillna(0)\n",
+    " \n",
+    "# and now the plotting\n",
+    "time_chart = vincent.Line(all_matches[['ITAvWAL', 'SCOvIRE', 'ENGvFRA']])\n",
+    "time_chart.axis_titles(x='Time', y='Freq')\n",
+    "time_chart.legend(title='Matches')\n",
+    "time_chart.to_json('time_chart.json')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
